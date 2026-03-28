@@ -800,7 +800,7 @@ footer a:hover { color: var(--text); }
     grid-template-columns: 1fr 1fr;
 }
 
-.project-card:hover { border-color: var(--accent); transform: tranlateY(-3px); }
+.project-card:hover { border-color: var(--accent); transform: translateY(-3px); }
 
 .project-preview {
     aspect-ratio: 16/9;
@@ -1077,4 +1077,85 @@ textarea { resize: vertical; min-height: 120px; }
     .contact-her-inner { grid-template-columns: 1fr; gap: 3rem; }
     .form-row { grid-template-columns: 1fr; }
     .response-inner { flex-direction: column; }
+}
+
+.project-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+}
+
+.card-thumbnail {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-thumbnail img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .card-thumbnail img {
+    transform: scale(1.04);
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.overlay-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.overlay-btn:hover {
+    opacity: 0.85;
+}
+
+.overlay-btn:not(.overlay-btn--ghost) {
+    background: #fff;
+    color: #111;
+}
+
+.overlay-btn--ghost {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.card-info {
+    padding: 16px;
+}
+
+.card-info h3 {
+    margin: 0 0 6px;
+    font-size: 1.1rem;
+}
+
+.card-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.7;
 }
