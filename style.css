@@ -1159,3 +1159,35 @@ textarea { resize: vertical; min-height: 120px; }
     font-size: 0.9rem;
     opacity: 0.7;
 }
+
+html.dark {
+    --bg: #1a1917;
+    --bg-alt: #222120;
+    --text: #f0ede8;
+    --text-muted: #9a9690;
+    --border: #2e2c2a;
+    --accent-light: #1a2a4a;
+}
+
+html.dark nav {
+    background: rgba(26,25,23,0.92);
+}
+
+html.dark .nav-logo img {
+    filter: invert(1);
+}
+
+html.dark .btn-primary {
+    background: #1a1917;
+    border: 1px solid #2e2c2a;
+    color: #f0ede8;
+}
+
+html.dark .btn-primary:hover {
+    background: #3a3835;
+    transform: translateY(-1px);
+}
+
+html.dark .response-strip {
+    background: #1a1917;
+}
