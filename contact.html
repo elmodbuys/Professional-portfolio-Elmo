@@ -6,6 +6,11 @@
         <title>Contact - Elmo De Buys</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+        <script>
+             if (localStorage.getItem("theme") === "dark") {
+                 document.documentElement.classList.add("dark");
+             }
+    </script>
     </head>
 
     <body>
@@ -21,6 +26,7 @@
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
+                <li><button id="theme-toggle">◑</button></li>
             </ul>
         </nav>
 
