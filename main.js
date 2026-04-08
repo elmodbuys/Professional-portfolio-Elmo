@@ -8,6 +8,17 @@ window.addEventListener('scroll', () => {
     }
 });
 
+const toggleBtn = document.getElementById('theme-toggle');
+
+if (toggleBtn) {
+    toggleBtn.addEventListener('click', function() {
+        document.documentElement.classList.toggle('dark');
+        const isDark = document.documentElement.classList.contains('dark');
+        toggleBtn.textContent = isDark ? '◐ ' : '◑';
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+}
+
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
