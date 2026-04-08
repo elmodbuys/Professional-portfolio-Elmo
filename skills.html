@@ -2,10 +2,15 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Skills - Elmo De Buys</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+        <script>
+             if (localStorage.getItem("theme") === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+    </script>
     </head>
 
     <body>
@@ -22,6 +27,7 @@
                 <li><a href="skills.html" class="active">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><button id="theme-toggle">◑</button></li>
             </ul>
         </nav>
 
@@ -60,7 +66,7 @@
                                     <span class="skill-name">CSS3</span>
                                     <span class="skill-badge badge-solid">Solid</span>
                                 </div>
-                                <div class="skill-bar-wrap"><div class="skill-bar" data-width="85%"></div></div>
+                                <div class="skill-bar-wrap"><div class="skill-bar" data-width="90%"></div></div>
                                 <p class="skill-desc">Flexbox, Grid, animations, responsive design, CSS variables and polished UI styling.</p>
                             </div>
                             <div class="skill-card">
@@ -68,7 +74,7 @@
                                     <span class="skill-name">JavaScript</span>
                                     <span class="skill-badge badge-building">Building</span>
                                 </div>
-                                <div class="skill-bar-wrap"><div class="skill-bar" data-width="60%"></div></div>
+                                <div class="skill-bar-wrap"><div class="skill-bar" data-width="65%"></div></div>
                                 <p class="skill-desc">DOM manipulation, events, async fundamentals. Actively strengthening functions and ES6+ patterns.</p>
                             </div>
                         </div>
@@ -157,7 +163,7 @@
         </footer>
 
         <script>
-            //Animate skill bars on load
+            
             window.addEventListener('load', () => {
                 document.querySelectorAll('.skill-bar').forEach(bar => {
                     bar.style.width = bar.dataset.width;
