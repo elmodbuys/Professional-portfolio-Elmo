@@ -15,6 +15,12 @@
 
     <body>
 
+        <div id="progress-bar">
+            <div id="bar-fill">
+                <img id="snowii" src="images/snowii.webp" alt="Snowii">
+            </div>
+         </div>
+
         <nav>
             <a href="index.html" class="nav-logo">
                 <img src="images/logo.png" alt="Elmo De Buys" height="50">
@@ -27,7 +33,19 @@
                 <li><a href="skills.html" class="active">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><button id="theme-toggle">◑</button></li>
+                 <li><button id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-split" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3 A9 9 0 0 0 12 21 Z"
+                        fill="currentColor" opacity="0.85"/>
+                    <path d="M12 3 A9 9 0 0 1 12 21 Z"
+                        fill="currentColor" opacity="0.2"/>
+                    <circle cx="12" cy="12" r="9"
+                        stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <line x1="12" y1="3" x2="12" y2="21"
+                        stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </button></li>
             </ul>
         </nav>
 
