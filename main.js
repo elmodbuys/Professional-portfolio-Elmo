@@ -1,3 +1,5 @@
+const barFill = document.getElementById('bar-fill');
+
 const nav = document.querySelector('nav');
 
 window.addEventListener('scroll', () => {
@@ -14,7 +16,6 @@ if (toggleBtn) {
     toggleBtn.addEventListener('click', function() {
         document.documentElement.classList.toggle('dark');
         const isDark = document.documentElement.classList.contains('dark');
-        toggleBtn.textContent = isDark ? '◐ ' : '◑';
         localStorage.setItem("theme", isDark ? "dark" : "light");
     });
 }
@@ -48,3 +49,12 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 revealElements.forEach(el => observer.observe(el));
+
+const progressBar = document.getElementById('progress-bar');
+
+window.addEventListener('scroll', function() {
+    const scrolled = window.scrollY;
+    const totalHeight = document.body.scrollHeight - window.innerHeight;
+    const progress = (scrolled/totalHeight) * 100;
+    barFill.style.height = Math.min(progress, 95) + '%';
+});
