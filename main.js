@@ -58,3 +58,38 @@ window.addEventListener('scroll', function() {
     const progress = (scrolled/totalHeight) * 100;
     barFill.style.height = Math.min(progress, 95) + '%';
 });
+
+let basePrice = 0;
+
+document.querySelectorAll('.pricing-card').forEach(link => {
+    link.addEventListener('click', () => {
+        basePrice = parseInt(link.dataset.price);
+        document.querySelectorAll('.pricing-card').forEach(card => {
+            card.classList.remove('selected');
+        })
+        link.classList.add('selected');
+        calculateTotal();
+    })
+})
+
+function calculateTotal() {
+   let total = basePrice;
+   document.querySelectorAll('input[name="add-on"]:checked').forEach(function(addon) {
+        total += parseInt(addon.dataset.price);
+   })
+   document.getElementById('total').textContent = 'Estimated total: R' + total;
+}
+
+document.querySelectorAll('input[name="add-on"]').forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+        calculateTotal();
+    });
+});
+
+const billingToggle = document.getElementById('billing-toggle');
+    billingToggle.addEventListener('change', () => {
+        document.querySelectorAll('.care-left').forEach(plan => {
+            const price = billingToggle.checked ? plan.dataset.annual : plan.dataset.monthly;
+            plan.querySelector('.care-price').textContent = price;
+        })
+    });
