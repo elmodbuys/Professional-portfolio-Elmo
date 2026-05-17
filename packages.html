@@ -1,0 +1,196 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Packages | Elmo De Buys</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            if (localStorage.getItem("theme") === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+        </script>
+    </head>
+
+    <body>
+         <div id="progress-bar">
+            <div id="bar-fill">
+                <img id="snowii" src="images/snowii.webp" alt="Snowii">
+            </div>
+         </div>
+
+        <nav>
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.png" alt="Elmo De Buys" height="50">
+            </a>
+            <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="packages.html" class="active">Packages</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                 <li><button id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-split" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3 A9 9 0 0 0 12 21 Z"
+                        fill="currentColor" opacity="0.85"/>
+                    <path d="M12 3 A9 9 0 0 1 12 21 Z"
+                        fill="currentColor" opacity="0.2"/>
+                    <circle cx="12" cy="12" r="9"
+                        stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <line x1="12" y1="3" x2="12" y2="21"
+                        stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </button></li>
+            </ul>
+        </nav>
+
+        <div class="page">
+            <section class="packages-hero">
+                <div class="packages-hero-inner">
+
+                    <div class="packages-left reveal">
+                        <span class="label">Packages</span>
+                        <h2>Simple, transparent pricing.</h2>
+                            <p>
+                                No surprises. Just honest work at fair prices, built around what your business actually needs.
+                            </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="pricing">
+            <section class="pricing-hero">
+                <div class="pricing-hero-inner container">
+                    <h2>Choose your package.</h2>
+                    <div class="pricing-cards">
+                        <div class="pricing-card" data-price="2500">
+                            <h3>Starter</h3>
+                            <p>Starting from R2,500</p>
+                            <ul>
+                                <li>Up to 4 pages</li>
+                                <li>Mobile responsive</li>
+                                <li>Contact form</li>
+                                <li>Basic SEO setup</li>
+                                <li>Social media links</li>
+                                <li>1 round of revisions</li>
+                            </ul>
+                            <a href="contact.html">Get Started...</a>
+                        </div>
+
+                        <div class="pricing-card" data-price="5000">
+                            <h3>Business</h3>
+                            <p>Starting from R5,000</p>
+                            <ul>
+                                <li>Everything in starter</li>
+                                <li>Up to 8 pages</li>
+                                <li>Custom branding integration</li>
+                                <li>Google maps + Analytics</li>
+                                <li>Image gallery or portfolio</li>
+                                <li>Speed optimisation</li>
+                                <li>2 rounds of revision</li>
+                            </ul>
+                            <a href="contact.html">Get started...</a>
+                        </div>
+
+                        <div class="pricing-card" data-price="9000">
+                            <h3>Growth</h3>
+                            <p>Starting from R9,000</p>
+                            <ul>
+                                <li>Everything in business</li>
+                                <li>Up to 12 pages</li>
+                                <li>Blog/news section</li>
+                                <li>Newsletter signup</li>
+                                <li>Advanced SEO</li>
+                                <li>3 rounds of revision</li>
+                            </ul>
+                            <a href="contact.html">Get started...</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="add-on-hero">
+            <div class="add-on-hero-inner container">
+                <h4>Add-On's</h4>
+                    <div class="add-on-row">
+                        <div class="add-on-left">
+                            <div><input type="checkbox" name="add-on" data-price="250">Extra pages - R250 per page</div>
+                            <div><input type="checkbox" name="add-on" data-price="600">Logo design - R600</div>
+                            <div><input type="checkbox" name="add-on" data-price="700">SEO boost - R700</div>
+                            <div><input type="checkbox" name="add-on" data-price="900">Google analytics setup - R900</div>
+                        </div>
+                    </div>
+                <div id="total"></div>
+            </div>
+        </section>
+        
+        <section class="care-hero">
+            <div class="care-hero-inner container">
+                <h3>Care Plans</h3>
+                <div class="care-toggle">
+                    <span class="toggle-label">Monthly</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="billing-toggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <span class="toggle-label">Annual <em class="save-badge">Save 20%</em></span>
+                </div>
+                <div class="care-row">
+                    <div class="care-left" data-monthly="R500" data-annual="R400">
+                        <p>Basic - <span class="care-price">R500</span> monthly retainer</p>
+                    </div>
+                    <div class="care-middle">
+                        <p>Content updates</p>
+                        <p>Priority support</p>
+                    </div>
+                    <div class="care-right">
+                        <a href="contact.html">Get started...</a>
+                    </div>
+                </div>
+
+                <div class="care-row">
+                    <div class="care-left" data-monthly="R950" data-annual="R760">
+                        <p>Standard - <span class="care-price">R950</span> monthly retainer</p>
+                    </div>
+                    <div class="care-middle">
+                        <p>Same as basic</p>
+                        <p>Minor design tweaks</p>
+                    </div>
+                    <div class="care-right">
+                        <a href="contact.html">Get started...</a>
+                    </div>
+                </div>    
+                <div class="care-row">
+                    <div class="care-left" data-monthly="R1500" data-annual="R1200">
+                        <p>Pro - <span class="care-price">R1500</span> monthly retainer</p>
+                    </div>
+                    <div class="care-middle">
+                        <p>Same as basic & Standard</p>
+                        <p>Monthly Analytics report</p>
+                    </div>
+                    <div class="care-right">
+                        <a href="contact.html">Get started...</a>
+                    </div>
+                </div>    
+            </div>  
+        </section>
+
+        <section class="response-strip">
+            <section class="response-inner">
+                <h2>Ready to get started? <em>Let's bring your vision to life.</em></h2>
+                <a href="contact.html" class="btn btn-cta">Get in touch...</a>
+            </section>
+        </section>
+
+        <footer>
+            <span>© 2026 Elmo De Buys</span>
+            <a href="contact.html">Let's work together</a>
+        </footer>
+
+        <script src="main.js"></script>
+    </body>
+</html>
